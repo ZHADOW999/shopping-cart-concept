@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Shop Our Products</h1>
+        <div class="product" id="product1">
+            <h2>Product 1</h2>
+            <p>$10.00</p>
+            <button onclick="addToCart('Product 1', 10)">Add to Cart</button>
+        </div>
+        <div class="product" id="product2">
+            <h2>Product 2</h2>
+            <p>$20.00</p>
+            <button onclick="addToCart('Product 2', 20)">Add to Cart</button>
+        </div>
+        <div class="product" id="product3">
+            <h2>Product 3</h2>
+            <p>$30.00</p>
+            <button onclick="addToCart('Product 3', 30)">Add to Cart</button>
+        </div>
+
+        <h2>Your Cart</h2>
+        <div id="cart"></div>
+        <button id="placeOrder" onclick="placeOrder()">Place Order</button>
+    </div>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("MmCXj5jDx-WN9Np-Y");
+        })();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
